@@ -14,6 +14,9 @@
 		C78BCB07249BA47600842598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78BCB05249BA47600842598 /* LaunchScreen.storyboard */; };
 		C78BCB12249BA4FE00842598 /* LaundryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78BCB11249BA4FE00842598 /* LaundryData.swift */; };
 		C78BCB14249BA8A800842598 /* LabelListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78BCB13249BA8A800842598 /* LabelListVC.swift */; };
+		C7991A07249C2B35003779B9 /* PlusClotheCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991A06249C2B35003779B9 /* PlusClotheCell.swift */; };
+		C7991A09249C2B96003779B9 /* ClotheInfoCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991A08249C2B96003779B9 /* ClotheInfoCustomCell.swift */; };
+		C7991A0B249C2D6A003779B9 /* AddClotheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991A0A249C2D6A003779B9 /* AddClotheVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		C78BCB08249BA47600842598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C78BCB11249BA4FE00842598 /* LaundryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryData.swift; sourceTree = "<group>"; };
 		C78BCB13249BA8A800842598 /* LabelListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListVC.swift; sourceTree = "<group>"; };
+		C7991A06249C2B35003779B9 /* PlusClotheCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusClotheCell.swift; sourceTree = "<group>"; };
+		C7991A08249C2B96003779B9 /* ClotheInfoCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheInfoCustomCell.swift; sourceTree = "<group>"; };
+		C7991A0A249C2D6A003779B9 /* AddClotheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClotheVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +87,8 @@
 		C78BCB0F249BA4D000842598 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C78BCAFB249BA47500842598 /* MainVC.swift */,
-				C78BCB13249BA8A800842598 /* LabelListVC.swift */,
+				C7991A06249C2B35003779B9 /* PlusClotheCell.swift */,
+				C7991A08249C2B96003779B9 /* ClotheInfoCustomCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,6 +96,9 @@
 		C78BCB10249BA4DF00842598 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C78BCAFB249BA47500842598 /* MainVC.swift */,
+				C7991A0A249C2D6A003779B9 /* AddClotheVC.swift */,
+				C78BCB13249BA8A800842598 /* LabelListVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,8 +175,11 @@
 			files = (
 				C78BCB02249BA47500842598 /* WorkspaceSettings_xcsettings__FabricCareSymbols.xcdatamodeld in Sources */,
 				C78BCB12249BA4FE00842598 /* LaundryData.swift in Sources */,
+				C7991A07249C2B35003779B9 /* PlusClotheCell.swift in Sources */,
 				C78BCAFC249BA47500842598 /* MainVC.swift in Sources */,
 				C78BCB14249BA8A800842598 /* LabelListVC.swift in Sources */,
+				C7991A0B249C2D6A003779B9 /* AddClotheVC.swift in Sources */,
+				C7991A09249C2B96003779B9 /* ClotheInfoCustomCell.swift in Sources */,
 				C78BCAF8249BA47500842598 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
