@@ -20,7 +20,7 @@ class PlusClotheCell: UITableViewCell {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     
     plusImage.center = contentView.center
-    plusImage.frame.size = CGSize(width: 150, height: 150)
+    plusImage.frame.size = CGSize(width: 120, height: 120)
     
     contentView.addSubview(plusImage)
     plusImage.translatesAutoresizingMaskIntoConstraints = false

@@ -50,7 +50,14 @@ class LaundryData {
   var labelName:[[String]] = [] // 라벨 데이터
   
   
-  //MARK: - API 라벨 설명 부분 추출
+  //MARK: - API
+  
+  func fetchUserLabelData(index number:Int) -> [String] {
+    return labelName[number]
+  }
+  
+  
+  
   func getProductDetailInfo(labelName:String) -> String {
     for category in labelCategoryData {
       let dataKeys = labelData[category]!.keys
