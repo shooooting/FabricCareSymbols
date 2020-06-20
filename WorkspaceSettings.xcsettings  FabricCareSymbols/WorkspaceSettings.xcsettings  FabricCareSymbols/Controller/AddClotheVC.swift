@@ -50,6 +50,7 @@ class AddClotheVC: UIViewController  {
 
     //talbeView Configure
     tableView.dataSource = self
+    tableView.delegate = self
     tableView.frame = view.frame
     
     tableView.register(PlusClotheCell.self, forCellReuseIdentifier: PlusClotheCell.identifier)
@@ -64,6 +65,8 @@ class AddClotheVC: UIViewController  {
     
   }
   
+  
+  //MARK: - API
   func fetchUserData() {
     guard let userSelectIndex = userSelectIndex,
           let laundryData = laundryData else { return }
@@ -71,8 +74,18 @@ class AddClotheVC: UIViewController  {
     userClothName = laundryData.clotheName[userSelectIndex]
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    guard let userSelectIndex = userSelectIndex,
+    let laundryData = laundryData else { return }
+    print("dataADD from \(userSelectIndex)")
+    userSelectLabelData = laundryData.fetchUserLabelData(index: userSelectIndex)
+    print(userSelectLabelData)
+    tableView.reloadData()
+  }
+  
 }
 
+//MARK: - UITableVeiwDataSource
 extension AddClotheVC: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -102,3 +115,18 @@ extension AddClotheVC: UITableViewDataSource {
     return cell
   }
 }
+
+//MARK: - UITableVeiwDelegate
+extension AddClotheVC: UITableViewDelegate {
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    let selectLabelVC = SelectLabelVC()
+    selectLabelVC.laundryData = self.laundryData
+    selectLabelVC.userSelectIndex = self.userSelectIndex
+    navigationController?.pushViewController(selectLabelVC, animated: true)
+    
+  }
+}
+
+

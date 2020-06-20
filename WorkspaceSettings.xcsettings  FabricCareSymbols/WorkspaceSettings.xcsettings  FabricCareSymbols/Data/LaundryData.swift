@@ -47,13 +47,17 @@ class LaundryData {
   //MARK: - User Select Data
   var clotheName:[String] = []  // 옷 이름
   var imageName:[Data] = []     // 이미지 데이터
-  var labelName:[[String]] = [] // 라벨 데이터
+  var labelName:[[String]] = [[]] // 라벨 데이터
   
   
   //MARK: - API
   
   func fetchUserLabelData(index number:Int) -> [String] {
-    return labelName[number]
+    return labelName[number] != [] ? labelName[number] : []
+  }
+  
+  func saveUSerLabelData(index number:Int, labelList labelArray:[String]) {
+    labelName[number] = labelArray
   }
   
   
