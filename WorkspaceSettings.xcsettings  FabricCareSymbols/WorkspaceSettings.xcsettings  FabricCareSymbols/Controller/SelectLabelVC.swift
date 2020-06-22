@@ -9,6 +9,7 @@
 import UIKit
 
 class SelectLabelVC: UIViewController {
+  
   //MARK: - Passed Properties
   var laundryData: LaundryData?
   var userSelectIndex:Int? {
@@ -20,7 +21,7 @@ class SelectLabelVC: UIViewController {
     }
   }
   
-  //MARK: - Using Properties
+  //MARK: - Local Properties
   var userSelectLabelData:[String] = []
   
   var padding: CGFloat = 10

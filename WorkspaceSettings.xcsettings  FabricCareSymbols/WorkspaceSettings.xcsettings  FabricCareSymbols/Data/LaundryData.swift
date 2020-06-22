@@ -60,6 +60,14 @@ class LaundryData {
     labelName[number] = labelArray
   }
   
+  func fetchLabelArray(category keyString:String) -> [String] {
+    if labelCategoryData.contains(keyString) {
+      return labelData[keyString]!.keys.sorted()
+    } else {
+      return []
+    }
+  }
+  
   
   
   func getProductDetailInfo(labelName:String) -> String {

@@ -8,3 +8,6 @@
 
 import Foundation
 
+protocol SelectLabelDelegate {
+  func tabLabelButtonDelegate(labelName name:String)
+}

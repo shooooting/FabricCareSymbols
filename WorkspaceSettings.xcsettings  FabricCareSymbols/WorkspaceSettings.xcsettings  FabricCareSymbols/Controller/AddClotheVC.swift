@@ -121,7 +121,7 @@ extension AddClotheVC: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-    let selectLabelVC = SelectLabelVC()
+    let selectLabelVC = NewSelectLabelVC()
     selectLabelVC.laundryData = self.laundryData
     selectLabelVC.userSelectIndex = self.userSelectIndex
     navigationController?.pushViewController(selectLabelVC, animated: true)
