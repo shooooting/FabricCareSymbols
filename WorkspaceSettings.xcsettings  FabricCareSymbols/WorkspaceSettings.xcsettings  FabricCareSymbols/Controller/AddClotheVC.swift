@@ -53,9 +53,9 @@ class AddClotheVC: UIViewController {
             fetchUserData()
         }
         
-        
         //talbeView Configure
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.frame = view.frame
         
         tableView.register(PlusClotheCell.self, forCellReuseIdentifier: PlusClotheCell.identifier)
@@ -70,12 +70,17 @@ class AddClotheVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        headerView.imgButton.layer.cornerRadius = headerView.imgButton.frame.width / 2
-//        tableView.reloadInputViews()
-
+      super.viewWillAppear(animated)
+      headerView.imgButton.layer.cornerRadius = headerView.imgButton.frame.width
+      
+      guard let userSelectIndex = userSelectIndex,
+      let laundryData = laundryData else { return }
+      print("dataADD from \(userSelectIndex)")
+      userSelectLabelData = laundryData.fetchUserLabelData(index: userSelectIndex)
+      print(userSelectLabelData)
+      tableView.reloadData()
     }
+
     
     func fetchUserData() {
         guard let userSelectIndex = userSelectIndex,
@@ -116,9 +121,18 @@ class AddClotheVC: UIViewController {
         alert.addAction(cancel)
         return present(alert, animated: true)
     }
-    
+  }
+  
+  //MARK: - API
+  func fetchUserData() {
+    guard let userSelectIndex = userSelectIndex,
+          let laundryData = laundryData else { return }
+    userSelectLabelData = laundryData.fetchUserLabelData(index: userSelectIndex)
+    userClothName = laundryData.clotheName[userSelectIndex]
+  }
 }
 
+//MARK: - UITableVeiwDataSource
 extension AddClotheVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -173,3 +187,18 @@ extension AddClotheVC: UIImagePickerControllerDelegate, UINavigationControllerDe
         dismiss(animated: true)
     }
 }
+
+//MARK: - UITableVeiwDelegate
+extension AddClotheVC: UITableViewDelegate {
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    let selectLabelVC = NewSelectLabelVC()
+    selectLabelVC.laundryData = self.laundryData
+    selectLabelVC.userSelectIndex = self.userSelectIndex
+    navigationController?.pushViewController(selectLabelVC, animated: true)
+    
+  }
+}
+
+

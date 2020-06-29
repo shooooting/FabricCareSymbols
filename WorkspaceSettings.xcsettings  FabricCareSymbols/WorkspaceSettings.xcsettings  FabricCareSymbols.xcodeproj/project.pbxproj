@@ -17,6 +17,10 @@
 		C7991A07249C2B35003779B9 /* PlusClotheCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991A06249C2B35003779B9 /* PlusClotheCell.swift */; };
 		C7991A09249C2B96003779B9 /* ClotheInfoCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991A08249C2B96003779B9 /* ClotheInfoCustomCell.swift */; };
 		C7991A0B249C2D6A003779B9 /* AddClotheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991A0A249C2D6A003779B9 /* AddClotheVC.swift */; };
+		C7991A0D249C589A003779B9 /* SelectLabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991A0C249C589A003779B9 /* SelectLabelVC.swift */; };
+		C7991A10249C59FE003779B9 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991A0F249C59FE003779B9 /* Protocol.swift */; };
+		C7FB2904249F948A00BA0E4A /* NewSelectLabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB2903249F948A00BA0E4A /* NewSelectLabelVC.swift */; };
+		C7FB2906249F971200BA0E4A /* SelectLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB2905249F971200BA0E4A /* SelectLabelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		C7991A06249C2B35003779B9 /* PlusClotheCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusClotheCell.swift; sourceTree = "<group>"; };
 		C7991A08249C2B96003779B9 /* ClotheInfoCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClotheInfoCustomCell.swift; sourceTree = "<group>"; };
 		C7991A0A249C2D6A003779B9 /* AddClotheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClotheVC.swift; sourceTree = "<group>"; };
+		C7991A0C249C589A003779B9 /* SelectLabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLabelVC.swift; sourceTree = "<group>"; };
+		C7991A0F249C59FE003779B9 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		C7FB2903249F948A00BA0E4A /* NewSelectLabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSelectLabelVC.swift; sourceTree = "<group>"; };
+		C7FB2905249F971200BA0E4A /* SelectLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLabelCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 		C78BCAF6249BA47500842598 /* WorkspaceSettings.xcsettings  FabricCareSymbols */ = {
 			isa = PBXGroup;
 			children = (
+				C7991A0E249C59F5003779B9 /* Protocol */,
 				C78BCB10249BA4DF00842598 /* Controller */,
 				C78BCB0F249BA4D000842598 /* View */,
 				C78BCB0E249BA4B400842598 /* Data */,
@@ -89,6 +98,7 @@
 			children = (
 				C7991A06249C2B35003779B9 /* PlusClotheCell.swift */,
 				C7991A08249C2B96003779B9 /* ClotheInfoCustomCell.swift */,
+				C7FB2905249F971200BA0E4A /* SelectLabelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,9 +108,19 @@
 			children = (
 				C78BCAFB249BA47500842598 /* MainVC.swift */,
 				C7991A0A249C2D6A003779B9 /* AddClotheVC.swift */,
+				C7991A0C249C589A003779B9 /* SelectLabelVC.swift */,
+				C7FB2903249F948A00BA0E4A /* NewSelectLabelVC.swift */,
 				C78BCB13249BA8A800842598 /* LabelListVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C7991A0E249C59F5003779B9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C7991A0F249C59FE003779B9 /* Protocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,11 +196,15 @@
 				C78BCB02249BA47500842598 /* WorkspaceSettings_xcsettings__FabricCareSymbols.xcdatamodeld in Sources */,
 				C78BCB12249BA4FE00842598 /* LaundryData.swift in Sources */,
 				C7991A07249C2B35003779B9 /* PlusClotheCell.swift in Sources */,
+				C7FB2904249F948A00BA0E4A /* NewSelectLabelVC.swift in Sources */,
+				C7991A0D249C589A003779B9 /* SelectLabelVC.swift in Sources */,
 				C78BCAFC249BA47500842598 /* MainVC.swift in Sources */,
 				C78BCB14249BA8A800842598 /* LabelListVC.swift in Sources */,
 				C7991A0B249C2D6A003779B9 /* AddClotheVC.swift in Sources */,
+				C7FB2906249F971200BA0E4A /* SelectLabelCell.swift in Sources */,
 				C7991A09249C2B96003779B9 /* ClotheInfoCustomCell.swift in Sources */,
 				C78BCAF8249BA47500842598 /* AppDelegate.swift in Sources */,
+				C7991A10249C59FE003779B9 /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
