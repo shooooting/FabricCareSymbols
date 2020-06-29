@@ -44,8 +44,6 @@ class ClotheInfoCustomCell: UITableViewCell {
         ui.forEach { contentView.addSubview($0) }
         ui.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
-        imgButton.layer.cornerRadius = width / 2
-
         NSLayoutConstraint.activate([
             imgButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             imgButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),

@@ -63,7 +63,6 @@ class AddClotheVC: UIViewController {
         
         headerView.imgButton.addTarget(self, action: #selector(selectImg(_:)), for: .touchUpInside)
         headerView.imgButton.sizeToFit()
-        headerView.imgButton.layer.cornerRadius = headerView.imgButton.frame.width / 2
         tableView.tableHeaderView = headerView
         headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
         
@@ -72,10 +71,9 @@ class AddClotheVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadInputViews()
-        headerView.imgButton.sizeThatFits(CGSize(width: headerView.imgButton.frame.width, height: headerView.imgButton.frame.width))
-        headerView.imgButton.sizeToFit()
+
         headerView.imgButton.layer.cornerRadius = headerView.imgButton.frame.width / 2
+//        tableView.reloadInputViews()
 
     }
     
@@ -169,7 +167,7 @@ extension AddClotheVC: UIImagePickerControllerDelegate, UINavigationControllerDe
 //            laundryData?.imageName[userDataIndex!] = imageData
 //        }
 
-        headerView.imgButton.layer.cornerRadius = headerView.imgButton.frame.width / 2
+//        headerView.imgButton.layer.cornerRadius = headerView.imgButton.frame.width / 2
         headerView.imgButton.setImage(selectImage, for: .normal)
         
         dismiss(animated: true)
