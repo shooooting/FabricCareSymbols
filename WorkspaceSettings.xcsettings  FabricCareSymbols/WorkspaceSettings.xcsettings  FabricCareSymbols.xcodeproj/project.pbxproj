@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E7E401424A980EA007AF5B7 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E401324A980EA007AF5B7 /* Button.swift */; };
 		C78BCAF8249BA47500842598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78BCAF7249BA47500842598 /* AppDelegate.swift */; };
 		C78BCAFC249BA47500842598 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78BCAFB249BA47500842598 /* MainVC.swift */; };
 		C78BCB02249BA47500842598 /* WorkspaceSettings_xcsettings__FabricCareSymbols.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C78BCB00249BA47500842598 /* WorkspaceSettings_xcsettings__FabricCareSymbols.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E7E401324A980EA007AF5B7 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		C78BCAF4249BA47500842598 /* WorkspaceSettings.xcsettings  FabricCareSymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorkspaceSettings.xcsettings  FabricCareSymbols.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78BCAF7249BA47500842598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C78BCAFB249BA47500842598 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -72,7 +74,7 @@
 		C78BCAF6249BA47500842598 /* WorkspaceSettings.xcsettings  FabricCareSymbols */ = {
 			isa = PBXGroup;
 			children = (
-				C7991A0E249C59F5003779B9 /* Protocol */,
+				C7991A0E249C59F5003779B9 /* util */,
 				C78BCB10249BA4DF00842598 /* Controller */,
 				C78BCB0F249BA4D000842598 /* View */,
 				C78BCB0E249BA4B400842598 /* Data */,
@@ -115,12 +117,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		C7991A0E249C59F5003779B9 /* Protocol */ = {
+		C7991A0E249C59F5003779B9 /* util */ = {
 			isa = PBXGroup;
 			children = (
 				C7991A0F249C59FE003779B9 /* Protocol.swift */,
+				0E7E401324A980EA007AF5B7 /* Button.swift */,
 			);
-			path = Protocol;
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +207,7 @@
 				C7FB2906249F971200BA0E4A /* SelectLabelCell.swift in Sources */,
 				C7991A09249C2B96003779B9 /* ClotheInfoCustomCell.swift in Sources */,
 				C78BCAF8249BA47500842598 /* AppDelegate.swift in Sources */,
+				0E7E401424A980EA007AF5B7 /* Button.swift in Sources */,
 				C7991A10249C59FE003779B9 /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

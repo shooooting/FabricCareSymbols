@@ -85,9 +85,4 @@ class LaundryData {
 }
 
 
-class imageSingleton {
-  static var imageList = imageSingleton()
-  var imageList:[Data] = []
-}
-
 

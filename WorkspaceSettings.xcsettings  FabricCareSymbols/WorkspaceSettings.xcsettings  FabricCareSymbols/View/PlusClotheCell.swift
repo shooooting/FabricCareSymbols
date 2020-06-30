@@ -12,7 +12,7 @@ class PlusClotheCell: UITableViewCell {
   static var identifier = "PlucClotheCell"
   
   let plusImage: UIImageView = {
-    let img = UIImageView(image: UIImage(named: "plus_photo" ))
+    let img = UIImageView(image: UIImage(named: "plus_photo-1"))
     return img
   }()
   
@@ -20,13 +20,17 @@ class PlusClotheCell: UITableViewCell {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     
     plusImage.center = contentView.center
-    plusImage.frame.size = CGSize(width: 120, height: 120)
+//    plusImage.frame.size = CGSize(width: 120, height: 120)
+    
+    let width = contentView.frame.width / 2
     
     contentView.addSubview(plusImage)
     plusImage.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
       plusImage.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
       plusImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+      plusImage.widthAnchor.constraint(equalToConstant: width),
+      plusImage.heightAnchor.constraint(equalToConstant: width)
     ])
   }
   
